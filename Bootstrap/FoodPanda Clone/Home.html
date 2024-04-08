@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons Library  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Food & Grocery Delivery - Restaurents near me in Pakistan</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        body::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        body::-webkit-scrollbar-track {
+            width: 15px;
+            background-color: rgb(231, 231, 231);
+        }
+
+        body::-webkit-scrollbar-thumb {
+            border-radius: 20px;
+            background-color: #f5418f;
+        }
+
+        .pink {
+            background-color: #e21b70;
+        }
+
+        .pink-text {
+            color: #e21b70;
+        }
+
+        .alert {
+            margin-bottom: 0px !important;
+        }
+    </style>
+</head>
+
+<body class="">
+    <!----------------- Dismissable Modal on Top  ----------------->
+    <div class="container-fluid pink  text-white ">
+        <div class="alert alert-dismissible fade show " role="alert">
+            <!-- <strong>Holy guacamole!</strong> You should check in on some of those fields below. -->
+            <div class="d-flex justify-content-center align-items-center">
+                <i class=" bi bi-backpack2-fill " style="font-size: 25px;"></i>
+                <h5 class="mx-3">Do you need a buisiness account? </h5>
+                <button class="btn btn-outline pink border fw-bold  "><small class="text-white">SIGN UP
+                        NOW</small></button>
+            </div>
+
+            <button type="button" class="close " data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-------------------------- NavBar --------------------------->
+    <div class="container-fluid bg-white py-2 nav shadow sticky-top">
+        <div class="container nav-items justify-content-between d-flex">
+            <div class="left-items align-items-center d-flex">
+                <div class="logo pink px-2 py-1 rounded">
+                    <a href="#"><i class="bi bi-alipay text-white"></i></a>
+                </div>
+                <h5 class="pink-text mx-2 " style="font-weight: bold;">foodpanda</h5>
+
+            </div>
+            <div class="right-items d-flex align-items-center">
+                <button type="button" class="btn btn-outline  px-3 pink-text mx-3" data-toggle="modal" data-target="#exampleMoadal">Log in</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <button class="btn btn-outline pink text-white  px-3 mx-3">Sign up</button>
+                <i class="bi bi-globe-asia-australia ms-3 px-1"></i>EN <span><a href="#" class="pink-text px-1"><i class="bi bi-caret-down-fill me-3"></i></a></span>
+                <a href="#"><i class="bi bi-cart-fill pink-text mx-3" style="font-size: 30px;"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-------------------------- Banner Top ------------------------>
+    <div class="container-fluid bg-light">
+        <div class="row">
+            <div class="col-lg-6 py-5  mt-5">
+                <h1 class="display-5 py-5 ">It's the food and groceries you love,delivered</h1>
+                <div class="input-box bg-white d-flex align-items-center pl-3 py-3 rounded shadow">
+                    <div class="input-group align-items-center border rounded ">
+                        <!-- <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div> -->
+                        <input type="text" class="form-control border-0" aria-label="Amount (to the nearest dollar)"
+                            placeholder="Your street and street number">
+                        <a href="#" class="mx-2" style="text-decoration: none;"><i
+                                class="bi bi-crosshair2 pink-text px-1"></i><strong class="pink-text">Locate
+                                Me</strong></a>
+
+                    </div>
+                    <div class="">
+                        <button class="btn pink text-white px-3 mx-3">Find food</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5">
+                <img src="assets/asset 0.png" class="img-fluid mt-5" alt="">
+
+            </div>
+        </div>
+    </div>
+
+    <!------------------------ Prepare Your Food  ------------------>
+    <div class="container-fluid my-5 p-0">
+        <div class="container">
+            <h2 class="display-6">You prepare the food, we handle the rest</h2>
+        </div>
+        <div class="img position-relative">
+            <img src="assets/asset 1.webp" height="400px" width="100%" alt=""
+                style="object-fit: cover; object-position: center;">
+
+            <!--  Banner on image  -->
+
+            <div class="row  " style="position: absolute; top: 8rem; left: 6rem; z-index: 1;">
+                <div class="col-lg-4 px-5 py-5 bg-white shadow rounded">
+                    <h3 class="display-6">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <small>Lorem ipsum, dolo et consectetur adipisicing elit. Quae odio, quisquam natus
+                        consectetur sapiente blanditiis? Dicta aliquid quis exercitationem repudiandae tenetur a,
+                        facilis autem suscipit voluptate reiciendis dignissimos neque veniam eligendi quibusdam
+                        nemo, voluptatum culpa asperiores quae ratior sit amet consectetur adipisicing elit. Quae odio,
+                        quisquam natus
+                        consectetur sapiente blanditiis? Dicta aliquid quis exercitationem repudiandae tenetur a,
+                        facilis autem suscipit voluptate reiciendis dignissimos neque veniam eligendi quibusdam
+                        nemo, voluptatum culpa asperiores quae ratione at! Repellendus.</small>
+                    <button class="btn btn-outline pink text-white  px-3  mt-3">Get started</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!--------------------------- Gallery   ------------------------>
+    <div class="container " style="margin-top: 15rem;">
+        <h3 class="display-5">Find us in these cities and many more!</h3>
+        <div class="row mb-4">
+
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 2.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 3.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 4.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 5.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row mb-4">
+
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 6.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 7.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 8.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 9.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row mb-4">
+
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 22.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 13.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 12.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 13.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row mb-4">
+
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 14.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 15.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 16.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 17.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row mb-4">
+
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 2.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 2.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 2.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 2.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row mb-4">
+
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 2.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 2.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 2.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 2.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="row mb-4">
+
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 18.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+                <a href="#" class="text-dark">
+                    <div class=""><img src="assets/asset 19.webp" class="img-fluid rounded shadow" alt=""></div>
+                    <div class="overlay-text bg-white rounded px-2 py-1"
+                        style="position: absolute; top: 8rem; left: 2rem;">
+                        <p class="mb-0"><strong>Karachi</strong></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 position-relative">
+            </div>
+            <div class="col-lg-3 position-relative">
+            </div>
+        </div>
+
+    </div>
+
+    <!--------------------------- Put us in your pocket   ------------------------>
+    <div class="container py-5">
+        <h3 class="display-5">Find us in these cities and many more!</h3>
+        <div class="container pink rounded">
+            <div class="row px-3 py-5 position-relative">
+                <div class="col-lg-6 text-white py-3">
+                    <h3 class="display-6">Download the food and groceries you love</h3>
+                    <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quod debitis sint error
+                        neque, tempora molestias facere explicabo, in, ea et. Similique illo ratione ipsa officiis amet
+                        velit veritatis cum placeat voluptas magnam, porro dolor cupiditate omnis dolores dolorum! Autem
+                        nostrum enim laboriosam hic.</small>
+                </div>
+                <div class="col-lg-6 " style="position: absolute; top: -3rem; left: 36rem;">
+                    <img src="assets/asset 33.webp" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------ Food Panda for Buisiness  ------------------>
+    <div class="container-fluid my-5 p-0">
+        <div class="container">
+            <h2 class="display-6">Take your office out to lunch</h2>
+        </div>
+        <div class="img position-relative">
+            <img src="assets/asset 34.webp" height="400px" width="100%" alt=""
+                style="object-fit: cover; object-position: center;">
+
+            <!--  Banner on image  -->
+
+            <div class="row  " style="position: absolute; top: 8rem; left: 6rem; z-index: 1;">
+                <div class="col-lg-4 px-5 py-5 bg-white shadow rounded">
+                    <h3 class="display-6">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <small>Lorem ipsum, dolo et consect consectetur adipisicing elit. Quae odio,
+                        quisquam natuss exercitationem repudiandae tenetur a,facilis autem suscipi
+                        nemo, voluptatum culpa asperiores quae ratione at! Repellendus.</small>
+                    <div class=""><button class="btn btn-outline pink text-white  px-3  mt-3">Get started</button></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!------------------------ Queries Section  ------------------>
+    <div class="container " style="margin-top: 7rem;">
+        <h2 class="display-5 ">Lorem ipsum dolor sit, em illum architecto officia culpa voluptatum harum, nesciunt enim
+            consequatur! Deleniti, impedit ipsum?</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatibus quasi rerum libero pariatur?
+            Consequatur, ducimus cumque animi repudiandae molestiae ut beatae quam voluptates unde impedit fugit
+            corporis architecto culpa incidunt, deserunt natus voluptatibus facere! Natus libero accusantium deserunt ab
+            nemo ea itaque earum!</p>
+        <h2 class="display-6">What's new ?</h2>
+        <ul style="list-style: none;">
+            <li>Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. sit.</li>
+            <li>Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. sit.</li>
+            <li>Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. sit.</li>
+            <li>Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. sit.</li>
+        </ul>
+        <h2 class="display-6">Frequently Asked Questions</h2>
+        <p class="fw-bold">How can I get foodpanda delivery?</p>
+        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque exercitationem eaque enim
+            eveniet consequuntur architecto quaerat consectetur pariatur sequi?</small>
+            <p class="fw-bold">How can I get foodpanda delivery?</p>
+            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque exercitationem eaque enim
+                eveniet consequuntur architecto quaerat consectetur pariatur sequi?</small>
+                <p class="fw-bold">How can I get foodpanda delivery?</p>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque exercitationem eaque enim
+                    eveniet consequuntur architecto quaerat consectetur pariatur sequi?</small>
+                    <p class="fw-bold">How can I get foodpanda delivery?</p>
+        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque exercitationem eaque enim
+            eveniet consequuntur architecto quaerat consectetur pariatur sequi?</small>
+    </div>
+
+
+    <!------------------------ Locations Section  ------------------>
+
+    <div class="container border-top border-bottom mt-5 d-flex align-items-center">
+        <a href="#" class="text-secondary mx-3 my-5">Laos</a>
+        <div class="vertical-line border" style="height: 20px ; width: 0px;"></div>
+        <a href="#" class="text-secondary mx-3 my-5">Cambodia</a>
+        <div class="vertical-line border" style="height: 20px ; width: 0px;"></div>
+        <a href="#" class="text-secondary mx-3 my-5">Myanmar</a>
+        <div class="vertical-line border" style="height: 20px ; width: 0px;"></div>
+        <a href="#" class="text-secondary mx-3 my-5">Thailand</a>
+        <div class="vertical-line border" style="height: 20px ; width: 0px;"></div>
+        <a href="#" class="text-secondary mx-3 my-5">Hong Kong</a>
+        <div class="vertical-line border" style="height: 20px ; width: 0px;"></div>
+        <a href="#" class="text-secondary mx-3 my-5">Taiwan</a>
+        <div class="vertical-line border" style="height: 20px ; width: 0px;"></div>
+        <a href="#" class="text-secondary mx-3 my-5">Malaysia</a>
+        <div class="vertical-line border" style="height: 20px ; width: 0px;"></div>
+        <a href="#" class="text-secondary mx-3 my-5">Phillipines</a>
+        <div class="vertical-line border" style="height: 20px ; width: 0px;"></div>
+        <a href="#" class="text-secondary mx-3 my-5">Singapore</a>
+        <div class="vertical-line border" style="height: 20px ; width: 0px;"></div>
+        <a href="#" class="text-secondary mx-3 my-5">Bangladesh</a>
+        <div class="vertical-line border" style="height: 20px ; width: 0px;"></div>
+
+
+
+    </div>
+
+
+    <!----------------------------- Footer  ------------------------->
+        
+    <div class="container footer pt-3 pb-5 border-bottom">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <p>@ foodpand</p>
+                    </div>
+                    <div class="col-lg-3 pink-text">
+                        <p class="font-weight-bold">Press</p>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2 ">Panda pay terms and conditions</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2 ">Security</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2 ">Careers</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2 ">Cashback Terms and Conditions</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2 ">Panda </a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2 ">Partner with Us</a>
+                    </div>
+                    <div class="col-lg-3 pink-text">
+                        <p class="font-weight-bold">Help Center</p>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2">Terms and Conditions</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2">Panda pay terms and conditions</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2">Download foodpanda Apps</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2">Panda pay terms and conditions</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2">Panda pay terms</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2">Panda pay terms and conditions</a>
+                    </div> 
+                    <div class="col-lg-3 pink-text">
+                        <p class="font-weight-bold">Refunds with pandapay</p>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2">Panda pay terms and conditions</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2">Panda pay terms and conditions</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2">Panda pay terms and conditions</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2">Panda pay terms and conditions</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2">Panda pay terms and conditions</a>
+                        <a href="#" class="pink-text font-weight-bold d-block my-2">Panda pay terms and conditions</a>
+                    </div>
+                    
+                    
+                </div>
+    </div>
+
+
+    <div class="container nav-items justify-content-between mt-4 pb-4 d-flex border-bottom ">
+            <div class="left-items align-items-center d-flex">
+                <div class="logo pink px-2 py-1 rounded">
+                    <a href="#"><i class="bi bi-alipay text-white"></i></a>
+                </div>
+                <h5 class="pink-text mx-2 " style="font-weight: bold;">foodpanda</h5>
+
+            </div>
+            <div class="right-items d-flex align-items-center">
+                <a href="#" class=" mx-1"><i class="bi bi-instagram pink-text" style="font-size: 30px;"></i></a>
+                <a href="#" class=" mx-1"><i class="bi bi-facebook pink-text" style="font-size: 30px;"></i></a>
+            </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

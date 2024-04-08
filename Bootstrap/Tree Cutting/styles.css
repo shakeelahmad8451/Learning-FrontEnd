@@ -1,0 +1,327 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+.bgcolor{
+    background-color: rgba(70, 197, 150, 0.99);
+}
+
+/* Top Header Styling */
+.headerbg{
+    
+    background-image: url(assets/hearder-bg.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    align-items: center;
+}
+
+.logo{
+    margin-left: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.logotext{
+    font-weight: 900px;
+}
+
+
+.headercontact{
+    margin-left: 690px;
+    /* padding-right: 50px; */
+}
+.headericons{
+    font-size: 25px;
+    color: rgba(70, 197, 150, 0.99);
+}
+
+.boldcontact{
+    color: rgba(70, 197, 150, 0.99);
+}
+
+h6{
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+
+/* nav-bar Styling */
+.navicons{
+    font-size: 25px;
+    padding: 10px;
+}
+.socialiconfb{
+    
+    margin-left: 250px;
+    color: rgba(70, 197, 150, 0.99);
+}
+
+.navsearchbutton:hover{
+    color: white;
+    background-color: rgba(70, 197, 150, 0.99) ;
+}
+
+
+
+
+/* hero section */
+.container-fluid{
+margin: 0px;
+padding: 0px;
+
+}
+.custom-container{
+    height: 500px;
+}
+.heroimg{
+    
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/slide-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcometext{
+    font-size: 30px;
+    padding-bottom: 2rem;
+}
+.treecutting{
+    color: rgba(70, 197, 150, 0.99);
+}
+.treecutting, .modernasset{
+    font-size: 60px;
+    font-weight: 550;
+}
+.readmore,.contactus{
+    border-radius: 20px;
+    font-size: 15px;
+
+    padding-top: 13px;
+    padding-bottom: 13px;
+
+}
+
+.readmore{
+    background-color: rgba(70, 197, 150, 0.99);
+}
+
+.herobuttonsdiv{
+    padding-bottom: 300px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* estimateform */
+
+.estimatebuttons{
+    border-radius: 30px;
+    font-size: 15px;
+
+    padding-top: 13px;
+    padding-bottom: 13px;
+
+    padding-right:35px;
+    padding-left: 30px;
+
+}
+.requestheading{
+    color: rgba(70, 197, 150, 0.99);
+
+}
+.submit{
+    background-color: rgba(70, 197, 150, 0.99);
+    padding: 11px 50px 9px 50px;
+    border-radius: 50px;
+
+} 
+
+/* about section  */
+.about{
+    margin-top:3rem;
+    background-image: url(assets/about-bg.png);
+    background-repeat: no-repeat;
+
+    
+}
+.color{
+    color:rgba(70, 197, 150, 0.99) ;
+}
+.abouttext{
+    padding-top: 10rem;
+    padding-bottom: 14rem;
+    padding-left: 7rem;
+}
+
+.axeimage{
+    margin-left: 3rem;
+    margin-top: 7rem;
+}
+.personcuttingtree{
+    padding-top: 23px;
+    margin-left: 3rem;
+}
+
+.gosomewhere{
+    margin-top: 238px;
+    padding: 11px 120px;
+    background-color:rgba(70, 197, 150, 0.8) ;
+} 
+.seemore{
+    background-color:rgba(70, 197, 150, 0.99) ;
+    border-radius: 50px;
+}
+
+
+/* services */
+.services{
+    align-items: flex-start;
+}
+.servicebtn{
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+/* whychoseus */
+.videocontainer{
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.morevideos{
+    text-decoration: underline;
+}
+.preview{
+    padding: 8px 8px;
+    font-size: 10px;
+    /* border-radius: 50%; */
+}
+.next{
+    margin-top: 112px;
+    font-size: 10px;
+}
+.btnradius{
+    border-radius: 50%;
+}
+
+.line{
+    border-color: black;
+    margin-top: 7rem;
+    width: 227px;
+    margin-left: -33px;
+    transform: rotate(90deg);
+}
+.workingimage{
+    height: 145px;
+    width: 250px;
+}
+
+
+/* our team */
+
+.underline{
+    text-decoration: underline;
+} 
+.viewmore{
+    font-size: 13px;
+    border-radius: 50px;
+}
+
+
+/* gallery */
+
+/* .overlay-text : to put text on the image */
+.image-container {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px; /* Adjust the font size as needed */
+    text-align: center;
+    /* You can add more styling properties as needed */
+}
+
+.image-container a {
+    display: block;
+}
+/* .overlay-text : to put text on the image */
+
+
+
+
+
+
+/* ceo introduction */
+.background{
+    background-image: url(assets/testimonials-b.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    align-items: center;
+}
+.icons{
+    font-size: larger;
+    color: rgba(70, 197, 150, 0.99);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.adjustarrows{
+    margin: 8px;
+    height: 40px;
+    width: 40px;
+    padding-top: 9px;
+    border-radius: 50%;
+}
+.bottompadding{
+    padding-bottom: 250px;
+}
+
+
+/* blog post  */
+.overlay-text-blog{
+    background-color: rgba(70, 197, 150, 0.7);
+    width: 100%;
+    padding: 8px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 13px;
+    text-align: center;
+
+}
+.adjustsize{
+    padding-left: 25px;
+    margin-top: 1rem;
+    font-size: 11px;
+}
+.readpost{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* footer */
+.footer{
+    background-image: url(assets/foter-bg.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+.overlay-text-subscribe {
+    position: absolute;
+    top: 50%;
+    left: 79%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    text-align: center;
+}

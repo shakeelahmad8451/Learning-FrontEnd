@@ -1,0 +1,22 @@
+// accessing each index value
+
+let arr=[1,2,3,4];
+
+arr.map((val)=>{
+    
+console.log(val);
+
+});
+
+
+// as map method return a value so we can store all these values in the new array
+
+let arr=[1,2,3,4];
+
+let newArray=arr.map((val)=>{
+    
+	return val*val;
+			// this will store the square of the number in the new array
+});
+
+console.log(newArray;

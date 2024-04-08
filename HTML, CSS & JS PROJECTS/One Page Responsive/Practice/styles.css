@@ -1,0 +1,41 @@
+
+.body{
+    background-color: skyblue;
+}
+
+.banner{
+    background-image: url(assets/banner-bk.jpg);
+    height: 90vh;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+
+h1{
+    justify-content: center;
+    color: white;
+    padding-left: 30px;
+    padding-top: 90px;
+}
+h2{
+    text-align: center;
+    padding-top: 90px;
+}
+
+.logo{
+    padding-left: 40px;
+}
+
+.nav-link:hover{
+
+    color: white;
+}
+.nav-item{
+    color: white;
+}
+.lead{
+    color: white;
+    padding-left: 40px;
+}
+
+

@@ -1,0 +1,57 @@
+/*header*/
+
+.display-4{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    padding: 2rem;
+    margin-bottom: 3rem;
+
+}
+
+.intro{
+    background-color: rgb(17, 30, 34);
+}
+
+
+/*hero section*/
+.choices{
+    
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 30px;
+    
+}
+
+.choices:hover{
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+
+.bi{
+    font-size: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.scores{
+    margin-top: 3rem;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.scoretext{
+    font-weight: bold;
+}
+
+.remarks{
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+

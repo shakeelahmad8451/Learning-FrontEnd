@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    background-color: rgba(70, 70, 70, 0.596);
+}
+
+.container{
+    width: 700px;
+    background-color: rgba(255, 255, 255, 0.74);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 5rem 5rem;
+    padding: 8px 20px;
+    flex-direction: column;
+}
+

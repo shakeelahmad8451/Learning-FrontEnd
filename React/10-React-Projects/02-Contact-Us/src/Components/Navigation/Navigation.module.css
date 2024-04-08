@@ -1,0 +1,21 @@
+
+
+nav{
+    display: flex;
+    height: 72px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 10px 10px 20px lightgray;
+    padding-inline: 5rem;
+}
+
+nav .left img{
+    height: 40px;
+    
+}
+
+nav .right ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}

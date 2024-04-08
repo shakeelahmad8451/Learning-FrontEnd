@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.profile-img{
+    height: 150px;
+    width: 150px;
+    border: 6px solid rgb(85, 83, 83);
+    border-radius: 50%;
+}
+
+.icon-hover{
+    color: rgb(29, 161, 242);
+}
+.background{
+    height: 100vh;
+    background-size: cover;
+    /* opacity: rgb(234, 57, 57); */
+}
+.custom-name{
+    font-size: 80px;
+    padding-top: 20rem;
+}

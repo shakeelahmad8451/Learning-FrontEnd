@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    /* background-color: rgba(0, 0, 0, 0.938); */
+    color: white;
+}
+
+.weather-app{
+    height: 300px;
+    width: 300px;
+    background-color: rgba(19, 18, 18, 0.747);
+    margin: auto;
+    margin-top: 7rem;
+    box-shadow: 10px 10px  10px gray;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.weather-app .top-header{
+    font-size: 30px;
+    font-weight: bold;
+    padding-block: 1rem;
+}
+
+.weather-app .search-bar{
+    background-color: #fff;
+    margin-inline: 2rem;
+    padding-block: 10px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.weather-app .search-bar input{
+    outline: none;
+    border: none;
+    width: 70%;
+    margin-right: 15px;
+}
+
+.weather-app .search-bar button{
+    background-color: white;
+    border: none;
+}
+
+.weather-app .search-bar button:hover{
+    cursor: pointer;
+}
+
+.invalid-city-name{
+    display: none;
+    margin-top: 5px;
+}
+
+.weather-app .weather-info{
+    margin-top: 1rem;
+    display: none;
+}
+.weather-app .weather-info .city-name{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.weather-app .weather-info .temperature{
+    font-size: 30px;
+    font-weight: bold;
+    margin-block: 12px;
+}
+
+.weather-app .weather-info .humidity{
+    margin-block:5px;
+}
+
+

@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-block: 8px;
+    align-items: center;
+}
+.text{
+    width: 50%;
+
+}
+.date{
+    width: 30%;
+}
+
+button{
+    height: 40px;
+    width: 70px;
+    outline: none;
+    background-color: red;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}

@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Clicking Button Change Content & Background-Color</title>
+</head>
+
+
+<style>
+    nav {
+        height: 60px;
+        width: 100%;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 1px 1px 5px gray;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    h1 {
+        font-weight: 700;
+    }
+
+    #hero {
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        top: 40%;
+        position: absolute;
+        left: 40%;
+
+    }
+
+    h2 {
+
+        padding-inline: 20px;
+        padding-block: 50px;
+        border-radius: 10px;
+        width: fit-content;
+        color: white;
+        font-weight: 400;
+        background-color: black;
+    }
+</style>
+
+<body>
+
+    <nav>
+        <h1>Click The Button Below </h1>
+    </nav>
+
+    <div id="hero">
+        <h2>Body Background Color : <span id="content">White</span> </h2>
+        <button id="btn">Click Me</button>
+    </div>
+
+
+    <script>
+
+        // Array of colors 
+        const colors = ['green', 'black', 'blue'];
+
+        let content = document.getElementById('content');
+
+        let btn = document.getElementById('btn');
+        
+        btn.addEventListener('click', function () {
+            //Generate a Random Number
+            let rand = Math.floor(Math.random() * 3);
+            console.log(rand);
+            console.log(colors[rand]);
+            document.body.style.backgroundColor = colors[rand];
+            content.innerText = colors[rand];
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>

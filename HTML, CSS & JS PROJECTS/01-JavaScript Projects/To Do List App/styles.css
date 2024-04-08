@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    background-image: linear-gradient(to bottom right, rgba(209, 41, 11, 0.849), rgba(26, 8, 5, 0.849));
+}
+
+.container{
+    width: 100%;
+    max-width: 476px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    border-radius: 20px;
+}
+
+.container .to-do-app{
+    margin-inline: 3rem;
+    padding-block: 2px;
+}
+
+.container .logo{
+    font-size: 20px;
+    font-weight: 900;
+    padding-block: 1rem;
+}
+
+.container .search-box{
+    height: 45px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(211, 211, 211, 0.295);
+    padding-block: 10px;
+    border-radius: 30px;
+    
+}
+.container .search-box input{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 30px;
+    margin-left: 1rem;
+}
+
+.container .search-box button{
+    background-image: linear-gradient(to bottom right, rgba(209, 41, 11, 0.849), rgba(26, 8, 5, 0.849));
+    color: white;
+    border: none;
+    padding-inline: 35px ;
+    height: inherit;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+
+.container .to-do-app .list-container i{
+    margin-right: 5px;
+}
+
+.container .to-do-app .list-container {
+    /* display: flex; */
+    margin-top: 2rem;
+}
+.container .to-do-app .list-container li{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    /* width: 100%; */
+    max-width: 400px;
+    list-style: none;
+    border-radius: 20px;
+    padding-left: 10px;
+    margin-block: 15px;
+    margin-inline: 10px;
+    font-size: 15px;
+    /* overflow: hidden; */
+    position: relative;
+    cursor: no-drop;
+    border-bottom: 1px solid lightgray;
+}
+
+.container .to-do-app .list-container li:hover{
+    background-color: #8a858528;
+}
+
+/* Close button */
+.container .to-do-app .list-container span{
+    
+    height: 40px;
+    width: 40px;
+    color: white;
+    background-image: linear-gradient(to bottom right, rgba(209, 41, 11, 0.849), rgba(26, 8, 5, 0.849));
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+/* Toggling class */
+.checked{
+    text-decoration: line-through;
+}
+
+

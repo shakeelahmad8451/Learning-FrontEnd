@@ -1,0 +1,27 @@
+.Btns{
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    height: 65px;
+    width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+    background-color: #fff;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.788);
+    color: white;
+
+}
