@@ -1,0 +1,1 @@
+These files contains beginner friendly code of some cloned pages using html,css and bootstrtap and also some javascripts beginners friendly projects like weahter app using api and more and React Code.
